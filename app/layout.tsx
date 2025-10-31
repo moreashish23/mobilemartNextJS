@@ -2,6 +2,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { CartProvider } from "@/context/CartContext";
 import { WishlistProvider } from "@/context/WishlistContext";
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "Mobile E-commerce",
@@ -17,6 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Navbar />
             <main className="min-h-screen">{children}</main>
           </WishlistProvider>
+          <Footer />
         </CartProvider>
       </body>
     </html>

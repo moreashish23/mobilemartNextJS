@@ -1,36 +1,127 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛍️ Mobile E-Commerce Website (Next.js + MongoDB)
 
-## Getting Started
+A modern and fully responsive **e-commerce web application** built using **Next.js**, featuring product browsing, wishlist functionality, and an admin dashboard for product management.  
+This project demonstrates **full-stack development**, clean UI design, and scalable architecture — ideal for production-level web applications.
 
-First, run the development server:
+---
 
+## 🚀 Features
+
+### 🧑‍💻 User Features
+- Browse and view detailed product information (image, price, description, etc.)
+- Add or remove items from the **Wishlist**
+- Responsive UI for all devices (mobile, tablet, laptop)
+- Smooth navigation with optimized image loading using `next/image`
+- SEO-friendly pages using **Next.js dynamic routing**
+
+### ⚙️ Admin Features
+- Secure **Admin Panel** for managing products
+- Add new products with images, price, and description
+- Edit or delete existing products
+- Real-time data storage using **MongoDB**
+- Simple authentication for admin login
+
+---
+
+## 🏗️ Tech Stack
+
+| Category | Technologies Used |
+|-----------|-------------------|
+| **Frontend** | Next.js (React), Tailwind CSS, React Icons |
+| **Backend** | Node.js, Express.js |
+| **Database** | MongoDB with Mongoose |
+| **State Management** | React Context API |
+| **Deployment** | Vercel (Frontend), Render/Atlas (Backend + DB) |
+
+---
+
+## 📁 Project Structure
+
+project-root/
+│
+├── app/ # Next.js App Router pages
+│ ├── admin/ # Admin panel pages
+│ ├── wishlist/ # Wishlist feature
+│ ├── product/[id]/ # Product details page
+│ └── page.tsx # Home page
+│
+├── components/ # Reusable UI components
+├── context/ # Wishlist context provider
+├── models/ # Mongoose models
+├── pages/api/ # Backend API routes
+├── public/ # Static assets
+├── styles/ # Global CSS / Tailwind setup
+├── .env.local # Environment variables (ignored in Git)
+└── README.md
+
+
+---
+
+## ⚡ Getting Started (Local Setup)
+
+### 1️⃣ Clone the Repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+git clone https://github.com/moreashish23/mobilemartNextJS
+cd mobilemartNextJS
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+npm install
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+🧑‍💼 Admin Panel Access
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Go to the Admin Dashboard page (/admin).
 
-## Learn More
+Login using the credentials from your .env.local file.
 
-To learn more about Next.js, take a look at the following resources:
+Perform actions:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+➕ Add a new product
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+✏️ Edit product details
 
-## Deploy on Vercel
+❌ Delete a product
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+All changes update automatically in the database and reflect in the product listings.
+ ❤️ Wishlist Feature
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Each product page has an “Add to Wishlist” button.
+
+Users can view all saved products in the /wishlist page.
+
+Wishlist data is persisted locally using React Context.
+
+🧩 Responsive Design
+
+Designed using Tailwind CSS for consistent styling.
+
+Tested on all major screen sizes using Chrome DevTools.
+
+Ensures smooth user experience across mobile, tablet, and desktop views.
+
+🌐 Deployment
+
+The application can be deployed easily using:
+
+Vercel → for Next.js frontend
+
+MongoDB Atlas → for database
+
+Render / Railway → for backend if separated
+
+🧑‍💼 Admin Panel Access
+
+The website includes a secure Admin Dashboard where products can be added, updated, or deleted.
+
+🔐 Login Credentials
+
+Use the following credentials to access the admin panel:
+
+🪪 Username (Email): admin  
+🔑 Password: supersecret123
+
+
+👨‍💻 Developer Info
+
+Author: Ashish More
+🎓 Department: Electronics & Telecommunication
+💼 Role: Frontend Developer | Full-Stack Enthusiast
+🔗 LinkedIn: https://www.linkedin.com/in/ashish-more-0651932a6/
